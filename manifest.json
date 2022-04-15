@@ -1,16 +1,16 @@
 
-// {
-//     "manifest_version": 2,
-//     "name": "Focus",
-//     "version" : "1.0",
-//     "description": "testing out cool shit",
-//     "content_scripts": [
+{
+    "manifest_version": 2,
+    "name": "Gotta Cache 'Em All",
+    "version" : "1.0",
+    "description": "Catch the Pokemon as you navigate the Codesmith website.",
+    "content_scripts": [
 
-//         {
-//             "matches": ["https://www.youtube.com/*"],
-//             "js": ["jquery.min.js", "./main.js"]
-//         }
-//     ]
-// } 
+        {
+            "matches": ["https://www.codesmith.io/about"],
+            "js": ["jquery.min.js", "./main.js"]
+        }
+    ]
+} 
 
    
