@@ -1,0 +1,16 @@
+
+// {
+//     "manifest_version": 2,
+//     "name": "Focus",
+//     "version" : "1.0",
+//     "description": "testing out cool shit",
+//     "content_scripts": [
+
+//         {
+//             "matches": ["https://www.youtube.com/*"],
+//             "js": ["jquery.min.js", "./main.js"]
+//         }
+//     ]
+// } 
+
+   
