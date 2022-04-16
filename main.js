@@ -31,7 +31,7 @@
 
 const instructor = document.querySelectorAll('img');
 instructor.forEach((img) => {
-  let randomNum = Math.floor(Math.random() * 150);
+  let randomNum = Math.floor(Math.random() * 151);
   img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomNum}.png`;
   img.srcset = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomNum}.png`;
   img.classList.add('pokemon');
@@ -49,13 +49,18 @@ instructor.forEach((img) => {
 let counter = 0; //increment every time we click a pokemon img
 function countPokemon(e) {
   //increment our counter
+  var audio = new Audio('sound1.wav');
+  e.currentTarget.onclick = function () {
+    audio.play();
+  };
   counter += 1;
+
   e.currentTarget.src =
     'https://purepng.com/public/uploads/large/purepng.com-pokeballpokeballdevicepokemon-ballpokemon-capture-ball-17015278256953yfbq.png';
   e.currentTarget.srcset =
     'https://purepng.com/public/uploads/large/purepng.com-pokeballpokeballdevicepokemon-ballpokemon-capture-ball-17015278256953yfbq.png';
 
-  gameHeader.innerHTML = `Gotta Catch 'Em All!<br> You've Caught ${counter} Pokemon!`;
+  gameHeader.innerHTML = `Gotta Cache 'Em All!<br> You've Caught ${counter} Pokemon!`;
   e.currentTarget.textContent = `${counter}`;
   e.currentTarget.removeEventListener('click', countPokemon);
 }
@@ -66,7 +71,7 @@ let gameHeader = document.querySelector('h1');
 gameHeader.style.backgroundColor = 'yellow';
 gameHeader.style.color = 'blue';
 gameHeader.style.padding = '50px';
-gameHeader.innerHTML = `Gotta Catch 'Em All!<br> You've Caught ${counter} Pokemon!`;
+gameHeader.innerHTML = `Gotta Cache 'Em All!<br> You've Caught ${counter} Pokemon!`;
 // gameHeader.innerHTML("Gotta Cache 'Em All");
 
 //change background to game mode
@@ -83,3 +88,6 @@ backgroundImg.style.backgroundImage =
 //   parent = pokemon.parentElement.parentElement.parentElement;
 //   name = parent.querySelector('.team-heading');
 //   name.innerHTML = '<p>Regina</p>'; -->this does not work
+
+//randomize mario sounds on every click --> fetch api? of mario sounds
+//fetch api of pokemon names to change instructor name for each img, change font color.
