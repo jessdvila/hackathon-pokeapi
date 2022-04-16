@@ -47,8 +47,9 @@ instructor.forEach((img) => {
 //add eventlistener for clicks on pokemon img to track number of pokemon caught
 //"Cache" pokemon
 let counter = 0; //increment every time we click a pokemon img
+let soundEffect = new Audio();
+
 function countPokemon(e) {
-  let soundEffect = new Audio();
   soundEffect.src = 'assets/sounds/sound3.mp3';
   soundEffect.play();
   //increment our counter
