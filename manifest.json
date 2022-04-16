@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Gotta Cache 'Em All",
   "version": "1.0",
   "description": "Catch the Pokemon as you navigate the Codesmith website.",
@@ -9,7 +9,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.codesmith.io/about"],
+      "matches": ["<all_urls>"],
       "js": ["jquery.min.js", "./main.js"]
     }
   ]

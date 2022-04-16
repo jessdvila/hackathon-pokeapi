@@ -31,10 +31,10 @@
 
 const instructor = document.querySelectorAll('img');
 instructor.forEach((img) => {
-  let randomNum = Math.floor(Math.random() * 151);
+  let randomNum = Math.floor(Math.random() * 150) + 1;
   img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomNum}.png`;
   img.srcset = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomNum}.png`;
-  img.classList.add('pokemon');
+  // img.classList.add('pokemon');
   img.addEventListener('click', countPokemon);
 });
 
@@ -48,11 +48,10 @@ instructor.forEach((img) => {
 //"Cache" pokemon
 let counter = 0; //increment every time we click a pokemon img
 function countPokemon(e) {
+  let soundEffect = new Audio();
+  soundEffect.src = 'assets/sounds/sound3.mp3';
+  soundEffect.play();
   //increment our counter
-  var audio = new Audio('sound1.wav');
-  e.currentTarget.onclick = function () {
-    audio.play();
-  };
   counter += 1;
 
   e.currentTarget.src =
